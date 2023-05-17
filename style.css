@@ -46,6 +46,8 @@ nav ul {
   margin: 25px auto;
   border-radius: 12px;
   padding: 30px;
+  background-image: url(cover.jpg);
+  
 }
 
 .bottom {
@@ -68,7 +70,34 @@ nav ul {
   margin-top: 13px;
 }
 
-.icons i{
-    cursor: pointer;
-    padding-left: 15px;
+.icons i {
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+.songlist2 img{
+  border-radius: 12px;
+}
+
+
+.songlist2 {
+  height: 50px;
+  display: flex;
+  background-color: white;
+  color: black;
+  width: 28%;
+  border-radius: 12px;
+}
+.timestamp {
+  display: flex;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.timestamp i {
+  padding: 0px 12px;
+}
+.songname {
+  justify-content: center;
+  padding: 12px 0px;
 }
