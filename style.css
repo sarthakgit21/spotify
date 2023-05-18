@@ -47,7 +47,6 @@ nav ul {
   border-radius: 12px;
   padding: 30px;
   background-image: url(cover.jpg);
-  
 }
 
 .bottom {
@@ -75,10 +74,9 @@ nav ul {
   padding-left: 15px;
 }
 
-.songlist2 img{
+.songlist2 img {
   border-radius: 12px;
 }
-
 
 .songlist2 {
   height: 50px;
