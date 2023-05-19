@@ -92,7 +92,7 @@ const makeplay = () => {
     }
   );
 };
-
+let flag = 1;
 Array.from(document.getElementsByClassName("songplaybutton")).forEach(
   (element) => {
     element.addEventListener("click", (e) => {
@@ -101,9 +101,12 @@ Array.from(document.getElementsByClassName("songplaybutton")).forEach(
       console.log(songindex);
       audielement.src = `songs/${songindex}.mp3`;
       mastername.innerText = songs[songindex - 1].songname;
-      if (audielement.paused) {
+
+      if (audielement.paused && flag == 1) {
         audielement.play();
+        flag = 0;
         console.log(audielement);
+        console.log(flag);
         gif.style.opacity = 1;
         masterplay.classList.remove("fa-play-circle");
         masterplay.classList.add("fa-pause-circle");
@@ -111,6 +114,7 @@ Array.from(document.getElementsByClassName("songplaybutton")).forEach(
         e.target.classList.add("fa-pause-circle");
       } else {
         audielement.pause();
+        flag = 0;
         masterplay.classList.add("fa-play-circle");
         masterplay.classList.remove("fa-pause-circle");
         gif.style.opacity = 0;
@@ -132,6 +136,9 @@ document.getElementById("next").addEventListener("click", () => {
   audielement.currentTime = 0;
   audielement.play();
   gif.style.opacity = 1;
+  makeplay();
+  container[songindex - 1].classList.remove("fa-play-circle");
+  container[songindex - 1].classList.add("fa-pause-circle");
 
   masterplay.classList.remove("fa-play-circle");
   masterplay.classList.add("fa-pause-circle");
@@ -147,6 +154,9 @@ document.getElementById("previous").addEventListener("click", () => {
   audielement.currentTime = 0;
   audielement.play();
   gif.style.opacity = 1;
+  makeplay();
+  container[songindex - 1].classList.remove("fa-play-circle");
+  container[songindex - 1].classList.add("fa-pause-circle");
 
   masterplay.classList.remove("fa-play-circle");
   masterplay.classList.add("fa-pause-circle");
