@@ -1,1 +1,1 @@
-console.log("Spotify")
+console.log("Spotify");
