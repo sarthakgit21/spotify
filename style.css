@@ -85,6 +85,7 @@ nav ul {
   color: black;
   width: 28%;
   border-radius: 12px;
+  margin: 10px 0px;
 }
 .timestamp {
   display: flex;
@@ -98,4 +99,13 @@ nav ul {
 .songname {
   justify-content: center;
   padding: 12px 0px;
+}
+.songinfo{
+  position: absolute;
+  left: 10vw;
+}
+
+.songinfo img{
+  opacity: 0;
+  transition: opacity 1s ease-in;
 }
