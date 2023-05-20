@@ -114,7 +114,7 @@ Array.from(document.getElementsByClassName("songplaybutton")).forEach(
         e.target.classList.add("fa-pause-circle");
       } else {
         audielement.pause();
-        flag = 0;
+        flag = 1;
         masterplay.classList.add("fa-play-circle");
         masterplay.classList.remove("fa-pause-circle");
         gif.style.opacity = 0;
