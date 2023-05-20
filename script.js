@@ -98,15 +98,12 @@ Array.from(document.getElementsByClassName("songplaybutton")).forEach(
     element.addEventListener("click", (e) => {
       makeplay();
       songindex = parseInt(e.target.id);
-      console.log(songindex);
       audielement.src = `songs/${songindex}.mp3`;
       mastername.innerText = songs[songindex - 1].songname;
 
       if (audielement.paused && flag == 1) {
         audielement.play();
         flag = 0;
-        console.log(audielement);
-        console.log(flag);
         gif.style.opacity = 1;
         masterplay.classList.remove("fa-play-circle");
         masterplay.classList.add("fa-pause-circle");
